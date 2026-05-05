@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{% block title %}SGMDE{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+</head>
+<body>
+  <header class="topo">
+    <img class="logo" src="{{ url_for('static', filename='img/logo_unitins.png') }}" alt="Logo Unitins" />
+    <h1>SGMDE — Sistema de Gestão de Matrículas e Documentos Escolares</h1>
+    <nav class="menu">
+      <a href="{{ url_for('dashboard') }}">Dashboard</a>
+      <a href="{{ url_for('cadastro_aluno') }}">Cadastro de Aluno</a>
+      <a href="{{ url_for('matricula') }}">Matrícula</a>
+      <a href="{{ url_for('documentos') }}">Documentos</a>
+      <a href="{{ url_for('relatorios') }}">Relatórios</a>
+      <a href="{{ url_for('login') }}">Sair</a>
+    </nav>
+  </header>
+
+  <main class="conteudo">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="rodape">
+    <small>Projeto acadêmico — SGMDE ({{ 2025 }})</small>
+  </footer>
+</body>
+</html> 

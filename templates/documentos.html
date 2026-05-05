@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Documentos - SGMDE{% endblock %}
+{% block content %}
+<h2>Envio de Documentos</h2>
+<form class="form" method="post" action="{{ url_for('documentos') }}" enctype="multipart/form-data">
+  <div class="grid-2">
+    <label>Aluno
+      <input list="alunos" name="aluno" required>
+      <datalist id="alunos">
+        <option value="MARCOS AURELIO"></option>
+        <option value="Maria Souza"></option>
+      </datalist>
+    </label>
+    <label>Tipo de documento
+      <select name="tipo" required>
+        <option value="" disabled selected>Selecione</option>
+        <option>RG</option>
+        <option>CPF</option>
+        <option>Comprovante de Endereço</option>
+        <option>Histórico Escolar</option>
+      </select>
+    </label>
+    <label>Arquivo (PDF/JPG/PNG)
+      <input type="file" name="arquivo" accept=".pdf,.jpg,.jpeg,.png" required>
+    </label>
+    <label>Observação
+      <input type="text" name="obs" placeholder="Opcional">
+    </label>
+  </div>
+  <button type="submit">Enviar</button>
+</form>
+{% endblock %} 

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - SGMDE{% endblock %}
+{% block content %}
+<h2>Dashboard</h2>
+<div class="grid-atalhos">
+  <a class="atalho" href="{{ url_for('cadastro_aluno') }}">Cadastro de Aluno</a>
+  <a class="atalho" href="{{ url_for('matricula') }}">Cadastro de Matrícula</a>
+  <a class="atalho" href="{{ url_for('documentos') }}">Enviar Documento</a>
+  <a class="atalho" href="{{ url_for('relatorios') }}">Gerar Relatório</a>
+</div>
+
+<section class="card">
+  <h3>Atalhos rápidos</h3>
+  <ul class="lista">
+    <li>Alunos cadastrados: <strong>{{ tot_alunos or 0 }}</strong></li>
+    <li>Matrículas do mês: <strong>{{ tot_matriculas or 0 }}</strong></li>
+    <li>Docs pendentes: <strong>{{ tot_pendencias or 0 }}</strong></li>
+  </ul>
+</section>
+{% endblock %} 

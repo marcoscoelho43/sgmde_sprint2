@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Cadastro de Aluno - SGMDE{% endblock %}
+{% block content %}
+<h2>Cadastro de Aluno</h2>
+<form class="form" method="post" action="{{ url_for('cadastro_aluno') }}">
+  <div class="grid-2">
+    <label>Nome completo
+      <input type="text" name="nome" required>
+    </label>
+    <label>Data de nascimento
+      <input type="date" name="nasc" required>
+    </label>
+    <label>CPF
+      <input type="text" name="cpf" placeholder="000.000.000-00" required>
+    </label>
+    <label>RG
+      <input type="text" name="rg">
+    </label>
+    <label>Telefone
+      <input type="tel" name="telefone" placeholder="(63) 9 0000-0000">
+    </label>
+    <label>E-mail
+      <input type="email" name="email">
+    </label>
+    <label>Endereço
+      <input type="text" name="endereco">
+    </label>
+    <label>Cidade
+      <input type="text" name="cidade" value="Paranã - TO">
+    </label>
+  </div>
+  <button type="submit">Salvar</button>
+</form>
+{% endblock %} 

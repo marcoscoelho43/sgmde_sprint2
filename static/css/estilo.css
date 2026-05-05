@@ -1,0 +1,40 @@
+:root {
+  --azul: #004c97;
+  --cinza: #f4f6f8;
+  --borda: #d7dbe0;
+  --texto: #1f2937;
+}
+
+*{box-sizing:border-box}
+body { font-family: Arial, sans-serif; color: var(--texto); background: var(--cinza); margin:0; }
+.topo { background: var(--azul); color:#fff; text-align:center; padding:18px 12px; }
+.logo { max-width:240px; height:auto; display:block; margin:0 auto 6px; }
+
+.menu { margin-top:10px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+.menu a { color:#fff; text-decoration:none; background: rgba(255,255,255,.15); padding:8px 12px; border-radius:8px; }
+.menu a:hover { background: rgba(255,255,255,.25); }
+
+.conteudo { max-width:980px; margin:22px auto; padding:0 12px; }
+.card { background:#fff; border:1px solid var(--borda); border-radius:12px; padding:16px; margin:16px 0; }
+.card-narrow { max-width:520px; margin:18px auto; }
+
+.form { display:grid; gap:12px; }
+.form-inline { grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); align-items:end; }
+.grid-2 { display:grid; gap:12px; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); }
+
+label { display:flex; flex-direction:column; gap:6px; font-weight:600; }
+input, select, button { padding:10px 12px; border:1px solid var(--borda); border-radius:8px; background:#fff; }
+button { background: var(--azul); color:#fff; border:none; cursor:pointer; }
+button:hover { filter: brightness(1.05); }
+
+.grid-atalhos { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:12px; margin-bottom:12px; }
+.atalho { display:block; text-align:center; background:#fff; border:1px solid var(--borda); border-radius:12px; padding:18px; text-decoration:none; color:var(--texto); font-weight:700; }
+.atalho:hover { outline:2px solid var(--azul); }
+
+.tabela { width:100%; border-collapse:collapse; }
+.tabela th, .tabela td { border:1px solid var(--borda); padding:8px 10px; }
+.tabela th { background:#eef2f6; text-align:left; }
+
+.link-secundario a { color: var(--azul); text-decoration:none; }
+
+.rodape { text-align:center; padding:18px; color:#6b7280; } 

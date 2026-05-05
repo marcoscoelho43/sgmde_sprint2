@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Relatórios - SGMDE{% endblock %}
+{% block content %}
+<h2>Relatórios</h2>
+<form class="form form-inline" method="get" action="{{ url_for('relatorios') }}">
+  <label>Tipo
+    <select name="tipo">
+      <option>Alunos por Turma</option>
+      <option>Matrículas por Ano</option>
+      <option>Documentos Pendentes</option>
+    </select>
+  </label>
+  <label>Filtro
+    <input type="text" name="filtro" placeholder="ex.: 1º Ano A / 2025">
+  </label>
+  <button type="submit">Gerar</button>
+</form>
+
+<section class="card">
+  <h3>Pré-visualização</h3>
+  <table class="tabela">
+    <thead>
+      <tr><th>#</th><th>Nome</th><th>Turma/Info</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>MARCOS AURELIO</td><td>1º Ano A</td><td>OK</td></tr>
+      <tr><td>2</td><td>Maria Souza</td><td>1º Ano A</td><td>Pendente Doc</td></tr>
+    </tbody>
+  </table>
+</section>
+{% endblock %} 

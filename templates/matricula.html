@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Matrícula - SGMDE{% endblock %}
+{% block content %}
+<h2>Matrícula</h2>
+<form class="form" method="post" action="{{ url_for('matricula') }}">
+  <div class="grid-2">
+    <label>Aluno
+      <input list="alunos" name="aluno" placeholder="Digite o nome do aluno" required>
+      <datalist id="alunos">
+        <option value="MARCOS AURELIO"></option>
+        <option value="Maria Souza"></option>
+      </datalist>
+    </label>
+    <label>Turma
+      <select name="turma" required>
+        <option value="" disabled selected>Selecione</option>
+        <option>1º Ano A</option>
+        <option>2º Ano B</option>
+        <option>3º Ano C</option>
+      </select>
+    </label>
+    <label>Ano letivo
+      <input type="number" name="ano" value="2025" min="2024" max="2030">
+    </label>
+    <label>Turno
+      <select name="turno">
+        <option>Matutino</option>
+        <option>Vespertino</option>
+        <option>Noturno</option>
+      </select>
+    </label>
+  </div>
+  <button type="submit">Confirmar matrícula</button>
+</form>
+{% endblock %} 
